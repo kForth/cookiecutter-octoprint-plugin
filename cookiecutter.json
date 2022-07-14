@@ -12,5 +12,6 @@
   "plugin_license": "AGPLv3",
   "plugin_homepage": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
   "plugin_source": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
-  "plugin_installurl": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/archive/{{cookiecutter.default_branch}}.zip"
+  "plugin_installurl": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/archive/{{cookiecutter.default_branch}}.zip",
+  "initialize_git_repo": "Y/N"
 }
