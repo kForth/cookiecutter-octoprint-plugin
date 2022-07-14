@@ -3,6 +3,7 @@
   "plugin_package": "octoprint_{{cookiecutter.plugin_identifier}}",
   "plugin_name": "OctoPrint-{{cookiecutter.plugin_identifier | capitalize}}",
   "repo_name": "{{cookiecutter.plugin_name}}",
+  "default_branch": "master",
   "full_name": "You",
   "email": "you@example.com",
   "github_username": "you",
@@ -11,5 +12,5 @@
   "plugin_license": "AGPLv3",
   "plugin_homepage": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
   "plugin_source": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
-  "plugin_installurl": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/archive/master.zip"
+  "plugin_installurl": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}/archive/{{cookiecutter.default_branch}}.zip"
 }
