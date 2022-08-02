@@ -11,7 +11,7 @@ from __future__ import absolute_import
 
 import octoprint.plugin
 
-class {{ cookiecutter.plugin_identifier | capitalize }}Plugin(octoprint.plugin.SettingsPlugin,
+class {{ cookiecutter.plugin_title }}Plugin(octoprint.plugin.SettingsPlugin,
     octoprint.plugin.AssetPlugin,
     octoprint.plugin.TemplatePlugin
 ):
@@ -42,7 +42,7 @@ class {{ cookiecutter.plugin_identifier | capitalize }}Plugin(octoprint.plugin.S
         # for details.
         return {
             "{{ cookiecutter.plugin_identifier }}": {
-                "displayName": "{{ cookiecutter.plugin_identifier | capitalize }} Plugin",
+                "displayName": "{{ cookiecutter.plugin_title }} Plugin",
                 "displayVersion": self._plugin_version,
 
                 # version check: github repository
@@ -60,7 +60,7 @@ class {{ cookiecutter.plugin_identifier | capitalize }}Plugin(octoprint.plugin.S
 # If you want your plugin to be registered within OctoPrint under a different name than what you defined in setup.py
 # ("OctoPrint-PluginSkeleton"), you may define that here. Same goes for the other metadata derived from setup.py that
 # can be overwritten via __plugin_xyz__ control properties. See the documentation for that.
-__plugin_name__ = "{{ cookiecutter.plugin_identifier | capitalize }} Plugin"
+__plugin_name__ = "{{ cookiecutter.plugin_title }} Plugin"
 
 
 # Set the Python version your plugin is compatible with below. Recommended is Python 3 only for all new plugins.
@@ -70,7 +70,7 @@ __plugin_pythoncompat__ = ">=3,<4"  # Only Python 3
 
 def __plugin_load__():
     global __plugin_implementation__
-    __plugin_implementation__ = {{ cookiecutter.plugin_identifier | capitalize }}Plugin()
+    __plugin_implementation__ = {{ cookiecutter.plugin_title }}Plugin()
 
     global __plugin_hooks__
     __plugin_hooks__ = {

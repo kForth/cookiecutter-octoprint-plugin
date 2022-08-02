@@ -1,7 +1,8 @@
 {
-  "plugin_identifier": "skeleton",
+  "plugin_title": "Skeleton",
+  "plugin_identifier": "{{cookiecutter.plugin_title | lower}}",
   "plugin_package": "octoprint_{{cookiecutter.plugin_identifier}}",
-  "plugin_name": "OctoPrint-{{cookiecutter.plugin_identifier | capitalize}}",
+  "plugin_name": "OctoPrint-{{cookiecutter.plugin_title}}",
   "repo_name": "{{cookiecutter.plugin_name}}",
   "default_branch": "master",
   "full_name": "You",
