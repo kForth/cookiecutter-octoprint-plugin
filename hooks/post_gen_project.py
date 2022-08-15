@@ -6,3 +6,5 @@ if '{{cookiecutter.initialize_git_repo}}'.strip().lower()[0] == 'y':
     # subprocess.call(['git', 'add', '*'])
     # subprocess.call(['git', 'commit', '-m', 'Initial commit'])
     # subprocess.call(['git', 'push', '-u', 'origin', '{{cookiecutter.default_branch}}'])
+    
+    subprocess.call(['pre-commit', 'install'])

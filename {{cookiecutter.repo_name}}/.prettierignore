@@ -1,0 +1,13 @@
+{{cookiecutter.plugin_package}}/static/js/lib
+{{cookiecutter.plugin_package}}/static/vendor
+*.md
+*.css
+**/package.json
+**/package-lock.json
+**/*.min.js
+docs
+build
+dist
+venv
+venv2
+venv3
