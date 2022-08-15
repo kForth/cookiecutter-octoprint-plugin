@@ -8,7 +8,6 @@ repos:
       - id: check-case-conflict
       - id: check-json
       - id: check-yaml
-      - id: check-toml
       - id: check-merge-conflict
       - id: fix-encoding-pragma
         args: ["--remove"]
@@ -46,6 +45,13 @@ repos:
       - id: black
         additional_dependencies:
           - click==8.0.4
+        args:
+          [
+            "--line-length",
+            "90",
+            "--include",
+            "(({{cookiecutter.plugin_package}}|tests|.github).*\\.pyi?$)|(setup\\.py)"
+          ]
   - repo: https://gitlab.com/pycqa/flake8
     rev: 3.9.2
     hooks:
