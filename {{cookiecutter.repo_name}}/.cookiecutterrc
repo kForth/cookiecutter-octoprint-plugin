@@ -1,0 +1,15 @@
+plugin_title: {{cookiecutter.plugin_title}}
+plugin_identifier: {{cookiecutter.plugin_identifier}}
+plugin_package: {{cookiecutter.plugin_package}}
+plugin_name: {{cookiecutter.plugin_name}}
+repo_name: {{cookiecutter.repo_name}}
+repo_branch: {{cookiecutter.repo_branch}}
+full_name: {{cookiecutter.full_name}}
+email: {{cookiecutter.email}}
+github_username: {{cookiecutter.github_username}}
+plugin_version: {{cookiecutter.plugin_version}}
+plugin_description: {{cookiecutter.plugin_description}}
+plugin_license: {{cookiecutter.plugin_license}}
+plugin_homepage: {{cookiecutter.plugin_homepage}}
+plugin_source: {{cookiecutter.plugin_source}}
+plugin_installurl: {{cookiecutter.plugin_installurl}}
