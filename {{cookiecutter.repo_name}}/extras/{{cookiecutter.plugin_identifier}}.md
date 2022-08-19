@@ -8,8 +8,8 @@ authors:
 - {{cookiecutter.full_name}}
 license: {{cookiecutter.plugin_license}}
 
-# TODO
-date: today's date in format YYYY-MM-DD, e.g. 2015-04-21
+# Date submitted in format YYYY-MM-DD, e.g. 2015-04-21
+date: {% now 'utc', '%Y-%m-%d' %}
 
 homepage: {{cookiecutter.plugin_homepage}}
 source: {{cookiecutter.plugin_source}}
