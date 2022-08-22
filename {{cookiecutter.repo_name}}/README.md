@@ -1,6 +1,6 @@
 # {{cookiecutter.plugin_name}}
 
-**TODO:** Describe what your plugin does.
+{{cookiecutter.plugin_description}}
 
 ## Setup
 

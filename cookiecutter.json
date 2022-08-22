@@ -9,7 +9,7 @@
   "email": "you@example.com",
   "github_username": "you",
   "plugin_version": "0.1.0",
-  "plugin_description": "TODO",
+  "plugin_description": "TODO: Describe what your plugin does.",
   "plugin_license": "AGPLv3",
   "plugin_homepage": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
   "plugin_source": "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}",
