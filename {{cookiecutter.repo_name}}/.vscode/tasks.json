@@ -1,0 +1,11 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build less",
+            "type": "shell",
+            "command": "lessc --clean-css {{cookiecutter.plugin_package}}/static/less/{{cookiecutter.plugin_identifier}}.less {{cookiecutter.plugin_package}}/static/css/{{cookiecutter.plugin_identifier}}.css",
+            "problemMatcher": ["$lessc"]
+        }
+    ]
+}
