@@ -51,7 +51,7 @@ compatibility:
 
   # List of compatible versions
   #
-  # A single version number will be interpretated as a minimum version requirement,
+  # A single version number will be interpreted as a minimum version requirement,
   # e.g. "1.3.1" will show the plugin as compatible to OctoPrint versions 1.3.1 and up.
   # More sophisticated version requirements can be modelled too by using PEP440
   # compatible version specifiers.
