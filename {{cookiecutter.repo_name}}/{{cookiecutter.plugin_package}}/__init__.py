@@ -11,15 +11,32 @@ import octoprint.plugin
 class {{ cookiecutter.plugin_title | replace(' ', '_') }}Plugin(
     octoprint.plugin.SettingsPlugin,
     octoprint.plugin.AssetPlugin,
-    octoprint.plugin.TemplatePlugin
+    octoprint.plugin.TemplatePlugin,
+    octoprint.plugin.StartupPlugin
 ):
+    def __init__(self):
+        super().__init__()
+
+        defaults = self.get_settings_defaults()
+        self._enabled = defaults["enabled"]
 
     ##~~ SettingsPlugin mixin
 
     def get_settings_defaults(self):
         return {
-            # put your plugin's default settings here
+            "enabled": True,
         }
+
+    def on_settings_save(self, data):
+        octoprint.plugin.SettingsPlugin.on_settings_save(self, data)
+        self.read_settings()
+
+    def read_settings(self):
+        self._enabled = self._settings.getBoolean(["enabled"])
+
+    def write_settings(self):
+        self._settings.setBoolean(["enabled"], self._enabled)
+        self._settings.save()
 
     ##~~ AssetPlugin mixin
 
