@@ -32,6 +32,37 @@ class {{ cookiecutter.plugin_title | replace(' ', '_') }}Plugin(
             "less": ["less/{{ cookiecutter.plugin_identifier }}.less"]
         }
 
+    ##~~ TemplatePlugin mixin
+
+    def get_template_configs(self):
+        return [
+            {
+                "type": "settings",
+                "name": "{{ cookiecutter.plugin_title }} Plugin",
+                "template": "{{ cookiecutter.plugin_identifier }}_settings.jinja2",
+                "custom_bindings": True,
+            },
+            {
+                "type": "tab",
+                "name": "{{ cookiecutter.plugin_title }}",
+                "template": "{{ cookiecutter.plugin_identifier }}_tab.jinja2",
+                "custom_bindings": True,
+                "icon": "fas fa-power-off",
+            },
+            {
+                "type": "sidebar",
+                "name": "{{ cookiecutter.plugin_title }}",
+                "template": "{{ cookiecutter.plugin_identifier }}_sidebar.jinja2",
+                "custom_bindings": True,
+                "icon": "fas fa-power-off",
+            },
+        ]
+
+    ##~~ StartupPlugin mixin
+
+    def on_after_startup(self):
+        self.read_settings()
+
     ##~~ Softwareupdate hook
 
     def get_update_information(self):
