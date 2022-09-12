@@ -5,7 +5,7 @@
  * License: {{cookiecutter.plugin_license}}
  */
 $(function() {
-    function {{ cookiecutter.plugin_title }}ViewModel(parameters) {
+    function {{ cookiecutter.plugin_title | replace(' ', '_') }}ViewModel(parameters) {
         var self = this;
 
         // assign the injected parameters, e.g.:
@@ -20,7 +20,7 @@ $(function() {
      * and a full list of the available options.
      */
     OCTOPRINT_VIEWMODELS.push({
-        construct: {{ cookiecutter.plugin_title }}ViewModel,
+        construct: {{ cookiecutter.plugin_title | replace(' ', '_') }}ViewModel,
         // ViewModels your plugin depends on, e.g. loginStateViewModel, settingsViewModel, ...
         dependencies: [ /* "loginStateViewModel", "settingsViewModel" */ ],
         // Elements to bind to, e.g. #settings_plugin_{{ cookiecutter.plugin_identifier }}, #tab_plugin_{{ cookiecutter.plugin_identifier }}, ...

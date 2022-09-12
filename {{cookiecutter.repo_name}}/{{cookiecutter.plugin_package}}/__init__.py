@@ -8,7 +8,8 @@
 
 import octoprint.plugin
 
-class {{ cookiecutter.plugin_title }}Plugin(octoprint.plugin.SettingsPlugin,
+class {{ cookiecutter.plugin_title | replace(' ', '_') }}Plugin(
+    octoprint.plugin.SettingsPlugin,
     octoprint.plugin.AssetPlugin,
     octoprint.plugin.TemplatePlugin
 ):
@@ -67,7 +68,7 @@ __plugin_pythoncompat__ = ">=3,<4"  # Only Python 3
 
 def __plugin_load__():
     global __plugin_implementation__
-    __plugin_implementation__ = {{ cookiecutter.plugin_title }}Plugin()
+    __plugin_implementation__ = {{ cookiecutter.plugin_title | replace(' ', '_') }}Plugin()
 
     global __plugin_hooks__
     __plugin_hooks__ = {
