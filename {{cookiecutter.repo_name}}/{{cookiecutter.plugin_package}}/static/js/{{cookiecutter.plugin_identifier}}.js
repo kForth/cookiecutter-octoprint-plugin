@@ -16,7 +16,7 @@ $(function() {
         self.enabled = ko.observable(false);
 
         self.onBeforeBinding = function () {
-            self._settings = self.settingsView.settings.plugins.poweroffafterprint;
+            self._settings = self.settingsView.settings.plugins.{{ cookiecutter.plugin_identifier }};
             self._updateSettings(self._settings, self);
         };
 
